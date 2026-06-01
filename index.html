@@ -209,20 +209,27 @@
 
   /* ── EXPERIENCE ── */
   #experience { background: var(--cream); }
-  .timeline { position: relative; }
-  .timeline::before { content:''; position:absolute; left:28px; top:10px; bottom:0; width:1px; background: var(--cream-dark); }
-  .tl-item { display: flex; gap: 1.8rem; margin-bottom: 2.5rem; }
-  .tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+  .timeline { position: relative; padding-left: 0; }
+  .tl-item { display: flex; gap: 1.8rem; margin-bottom: 2rem; position: relative; }
+  .tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 64px; position: relative; }
   .tl-logo {
-    width: 58px; height: 58px; border-radius: 10px;
+    width: 64px; height: 64px; border-radius: 12px;
     background: var(--white);
     border: 1.5px solid var(--cream-dark);
     display: flex; align-items: center; justify-content: center;
     overflow: hidden; flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(11,22,41,0.06);
+    box-shadow: 0 2px 10px rgba(11,22,41,0.08);
+    position: relative; z-index: 2;
   }
-  .tl-logo svg { width: 38px; height: 38px; }
-  .tl-connector { flex: 1; width: 1px; background: var(--cream-dark); margin: 6px 0; }
+  .tl-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tl-connector {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--cream-dark), transparent);
+    margin: 4px 0 0 0;
+    position: relative; z-index: 1;
+    min-height: 24px;
+  }
   .tl-card {
     flex: 1;
     background: var(--white);
@@ -529,10 +536,7 @@
     <div class="tl-item">
       <div class="tl-left">
         <div class="tl-logo" title="University of North Texas">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="8" fill="#00853E"/>
-            <text x="24" y="32" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="white">UNT</text>
-          </svg>
+          <img src="unt_logo.png" alt="University of North Texas" />
         </div>
         <div class="tl-connector"></div>
       </div>
@@ -560,11 +564,7 @@
     <div class="tl-item">
       <div class="tl-left">
         <div class="tl-logo" title="University of North Texas — ITDS">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="8" fill="#00853E"/>
-            <text x="24" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="white">UNT</text>
-            <text x="24" y="39" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Research</text>
-          </svg>
+          <img src="unt_logo.png" alt="University of North Texas" />
         </div>
         <div class="tl-connector"></div>
       </div>
@@ -590,13 +590,9 @@
     <div class="tl-item">
       <div class="tl-left">
         <div class="tl-logo" title="Northern Trust Corporation">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="8" fill="#003087"/>
-            <text x="24" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="white">NORTHERN</text>
-            <text x="24" y="33" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#C9A84C">TRUST</text>
-          </svg>
+          <img src="northern_trust_logo.png" alt="Northern Trust" />
         </div>
-        <div class="tl-connector" style="opacity:0"></div>
+        <div class="tl-connector"></div>
       </div>
       <div class="tl-card">
         <div class="tl-top">
